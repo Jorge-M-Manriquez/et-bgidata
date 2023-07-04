@@ -166,7 +166,7 @@ def guardar_datos(data, folder_name):
 def get_current_datetime():
     return datetime.now().strftime('%Y%m%d%H%M%S')
 
-def dfs_api_recorridos(request):
+def dfs_recorridos(request):
 
     rec_disponibles = obtener_datos('https://www.red.cl/restservice_v2/rest/getservicios/all')
 
@@ -212,4 +212,4 @@ def dfs_api_recorridos(request):
     return 'Proceso completado con éxito.'
 
 if __name__ == '__main__':
-    dfs_api_recorridos(None)
+    dfs_recorridos(None)
